@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  sourcegraph:
+    restart: unless-stopped
+    image: sourcegraph/server:3.4.2
+    volumes:
+      - ./config:/etc/sourcegraph
+      - sourcegraph-data:/var/opt/sourcegraph
+    ports:
+      - '7080:7080'
+      - '2633:2633'
+
+volumes:
+    sourcegraph-data:
+      external: true
