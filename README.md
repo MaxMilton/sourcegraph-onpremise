@@ -11,4 +11,4 @@
 ### Upgrade
 
 1. Edit `docker-compose.yml` (e.g. to update docker image tag)
-1. `docker-compose up -d --build`
+1. `docker-compose pull; docker-compose up -d --build`
